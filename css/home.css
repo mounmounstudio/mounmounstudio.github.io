@@ -308,8 +308,9 @@ template {
 [hidden] {
   display: none; }
 
+/*media queries*/
 /* FlexBox */
-.promoBar, .navbar_container, .foo_container, .largePhoto_bg {
+.promoBar, .navbar_container, .mobile_menu ul, .foo_container, .largePhoto_bg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,6 +348,9 @@ nav {
   top: 43px;
   left: 0;
   z-index: 10; }
+  @media (max-width: 749px) {
+    nav {
+      height: 100px; } }
 
 .navbar_container {
   width: 60%;
@@ -356,6 +360,12 @@ nav {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row; }
+  @media (min-width: 750px) {
+    .navbar_container {
+      width: 80%; } }
+  @media (max-width: 749px) {
+    .navbar_container {
+      width: 90%; } }
   .navbar_container .logo_nav {
     display: inline-block;
     width: calc(100% / 3);
@@ -369,12 +379,16 @@ nav {
         opacity: 0.8; }
       .navbar_container .logo_nav a img {
         width: 120px; }
+        @media (max-width: 749px) {
+          .navbar_container .logo_nav a img {
+            width: 100px; } }
   .navbar_container ul {
     width: calc(100% / 3);
     margin: 0;
     padding: 0; }
     .navbar_container ul li {
       list-style: none;
+      font-size: 0.9em;
       font-weight: 700;
       letter-spacing: 8px; }
       .navbar_container ul li a {
@@ -388,13 +402,57 @@ nav {
   .navbar_container .left_nav {
     text-align: left; }
     .navbar_container .left_nav li {
-      float: left;
+      float: left; }
+    .navbar_container .left_nav li:first-child {
       margin-right: 35px; }
   .navbar_container .right_nav {
     text-align: right; }
     .navbar_container .right_nav li {
       float: right;
       margin-left: 25px; }
+
+.mobile_menu,
+.mobile_menuItem {
+  display: none; }
+
+@media (max-width: 749px) {
+  .mobile_menuItem {
+    display: block;
+    font-size: 1.5em; } }
+
+@media (max-width: 749px) {
+  .desk_menuItem {
+    display: none; } }
+
+.mobile_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  width: 100%;
+  height: 100%;
+  background-color: beige; }
+  .mobile_menu ul {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .mobile_menu ul li {
+      list-style: none;
+      width: 100%;
+      text-align: center;
+      margin: 20px 0; }
+      .mobile_menu ul li a {
+        text-decoration: none;
+        color: #D66D1B;
+        letter-spacing: 0.4em;
+        font-weight: 500; }
+      .mobile_menu ul li #closeIcon {
+        font-size: 1.8em; }
 
 .wrapper {
   position: relative;
@@ -410,18 +468,49 @@ footer {
   width: 100%;
   height: 300px;
   background-color: #4C5449; }
+  @media (max-width: 749px) {
+    footer {
+      height: 520px; } }
 
 .foo_container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   width: 80%;
   margin: auto;
   height: 100%; }
+  @media (min-width: 750px) {
+    .foo_container {
+      width: 90%; } }
+  @media (max-width: 749px) {
+    .foo_container {
+      width: 70%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .foo_alignCol {
   width: calc(100% / 3);
   text-align: left; }
+  @media (max-width: 749px) {
+    .foo_alignCol {
+      width: 100%; } }
+  @media (min-width: 750px) {
+    .foo_alignCol ul {
+      padding: 0;
+      margin: 0; } }
+  @media (max-width: 749px) {
+    .foo_alignCol ul {
+      padding: 0;
+      margin: 0; } }
   .foo_alignCol ul li {
     list-style: none;
     margin: 15px 0; }
+    @media (max-width: 749px) {
+      .foo_alignCol ul li {
+        margin: 20px 0; } }
     .foo_alignCol ul li a {
       color: #D66D1B;
       text-decoration: none;
@@ -472,6 +561,9 @@ footer {
   font-size: 4em;
   letter-spacing: 0.1em;
   font-weight: 700; }
+  @media (max-width: 749px) {
+    .headTitle {
+      font-size: 2.4em; } }
 
 .headSubTitle {
   color: beige;
@@ -481,3 +573,7 @@ footer {
   font-size: 0.7em;
   font-weight: 500;
   margin-top: 20px; }
+  @media (max-width: 749px) {
+    .headSubTitle {
+      font-size: 0.6em;
+      letter-spacing: 0.56em; } }
