@@ -310,7 +310,7 @@ template {
 
 /*media queries*/
 /* FlexBox */
-.promoBar, .navbar_container, .mobile_menu ul, .foo_container, .largePhoto_bg {
+.promoBar, .navbar_container, .mobile_menu ul, .foo_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -399,8 +399,6 @@ nav {
         transition: 0.3s ease; }
         .navbar_container ul li a:hover {
           color: #D66D1B; }
-      .navbar_container ul li .highlight_menuItem {
-        color: #D66D1B; }
   .navbar_container .left_nav {
     text-align: left; }
     .navbar_container .left_nav li {
@@ -535,57 +533,3 @@ footer {
   -o-transition: 0.5s ease;
   transition: 0.5s ease;
   opacity: 0; }
-
-.largePhoto_bg {
-  width: 100%;
-  height: 100vh;
-  background-color: #314C5D; }
-
-.banner_link {
-  display: block;
-  width: 50%;
-  height: 100%;
-  cursor: default; }
-
-.leftPhoto_box,
-.rightPhoto_box {
-  width: 100%;
-  min-height: 100vh; }
-
-.leftPhoto_box {
-  background: url(../img/banner/home_leftpic.jpg) no-repeat center center;
-  background-size: cover;
-  border: none; }
-
-.rightPhoto_box {
-  background: url(../img/banner/home_rightpic.jpg) no-repeat center center;
-  background-size: cover;
-  border: none; }
-
-.headText_box {
-  position: absolute;
-  z-index: 2; }
-
-.headTitle {
-  color: beige;
-  width: 100%;
-  text-align: center;
-  font-size: 4em;
-  letter-spacing: 0.1em;
-  font-weight: 700; }
-  @media (max-width: 749px) {
-    .headTitle {
-      font-size: 2.4em; } }
-
-.headSubTitle {
-  color: beige;
-  width: 100%;
-  text-align: center;
-  letter-spacing: 1em;
-  font-size: 0.7em;
-  font-weight: 500;
-  margin-top: 20px; }
-  @media (max-width: 749px) {
-    .headSubTitle {
-      font-size: 0.6em;
-      letter-spacing: 0.56em; } }
