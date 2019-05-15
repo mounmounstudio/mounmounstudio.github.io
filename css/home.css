@@ -378,10 +378,10 @@ nav {
       .navbar_container .logo_nav a:hover {
         opacity: 0.8; }
       .navbar_container .logo_nav a img {
-        width: 150px; }
+        width: 100px; }
         @media (max-width: 749px) {
           .navbar_container .logo_nav a img {
-            width: 100px; } }
+            width: 50px; } }
   .navbar_container ul {
     width: calc(100% / 3);
     margin: 0;

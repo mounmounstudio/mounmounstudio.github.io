@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="viewport" content="viewport-fit=cover">
-    <meta name="title" content="moun moun">
+    <meta name="title" content="FIND US ! | moun moun">
     <meta name="description" content="">
     <meta name="keywords" content="泳裝,女性泳裝,海洋,浮潛,衝浪,攝影,設計師品牌">
     <meta name="copyright" content="moun moun">
-    <meta property="og:title" content="moun moun">
+    <meta property="og:title" content="FIND US ! | moun moun">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.mounstudio.co/">
     <meta property="og:image" content="">
     <meta property="og:description" content="">
     <meta property="og:site_name" content="moun moun">
-    <link rel="shortcut icon" href="img/icons/faviicon.png">
+    <link rel="shortcut icon" href="../img/icons/faviicon.png">
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="css/home.css">
-    <title>moun moun</title>
+    <link rel="stylesheet" href="../css/findus.css">
+    <title>FIND US ! | moun moun</title>
 </head>
 
 <body>
@@ -29,55 +29,76 @@
     <nav>
         <div class="navbar_container">
             <ul class="left_nav">
-                <li class="desk_menuItem"><a href="static/art.html">ART</a></li>
+                <li class="desk_menuItem"><a href="art.html">ART</a></li>
                 <li class="desk_menuItem"><a href="https://www.mounstudio.co/collections/all">SHOP</a></li>
             </ul>
             <div class="logo_nav">
-                <a href="index.html"><img src="img/icons/logo.png" alt="moun moun logo"></a>
+                <a href="../index.html"><img src="../img/icons/logo.png" alt="moun moun logo"></a>
             </div>
             <ul class="right_nav">
-                <li><a href="static/about.html" class="desk_menuItem">ABOUT</a></li>
+                <li><a href="about.html" class="desk_menuItem">ABOUT</a></li>
                 <li><a href="#" id="menuIcon" class="mobile_menuItem"><i class="fas fa-align-justify"></i></a></li>
             </ul>
         </div>
     </nav>
     <div class="mobile_menu">
-        <!-- <a href="#" id="closeIcon"><i class="fas fa-times"></i></a> -->
         <ul>
             <li><a href="#" id="closeIcon"><i class="fas fa-times"></i></a></li>
-            <li><a href="static/art.html">ART</a></li>
+            <li><a href="art.html">ART</a></li>
             <li><a href="https://www.mounstudio.co/collections/all">SHOP</a></li>
-            <li><a href="static/about.html">ABOUT</a></li>
-            <li><a href="static/contact.html">CONTACT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
         </ul>
     </div>
     <div class="wrapper">
-        <header class="largePhoto_bg">
-            <a href="javascript:(void)" class="banner_link">
-                <div class="leftPhoto_box"></div>
-            </a>
-            <a href="javascript:(void)" class="banner_link">
-                <div class="rightPhoto_box"></div>
-            </a>
-            <div class="headText_box">
-                <div class="headTitle">moun moun</div>
-                <div class="headSubTitle">BY MOUN MOUN STUDIO</div>
+        <div class="container">
+            <div class="animateShow">
+                <div class="pageTitle">FIND US !</div>
+                <div class="pageContent">
+                    <form enctype="text/plain" accept-charset="utf-8">
+                        <!-- 寄件者姓名    -->
+                        <input id="nameText" type="text" name="Name" value size="60" placeholder="姓名(name)" required>
+                        <!-- required 必填欄位 ，placeholder 預設內容-->
+
+                        <!-- 寄件者email -->
+                        <input id="emailText" type="email" name="Email" value size="60" placeholder="Email" required>
+
+                        <!-- 寄件者電話 -->
+                        <input id="telText" type="tel" name="Phone" value size="60" aria-invalid="false"
+                            placeholder="電話(phone)" required>
+
+                        <!-- 郵件主旨 -->
+                        <input id="subText" type="text" name="Subject" value size="60" aria-invalid="false"
+                            placeholder="主旨(subject)" required>
+
+                        <!-- 郵件內容 -->
+                        <textarea id="bodyText" name="your-message" cols="40" rows="10" aria-required="true"
+                            aria-invalid="false" placeholder="你的訊息(Your Message)" required></textarea>
+
+                        <!-- 傳送按鈕 -->
+                        <div>
+                            <input type="button" value="送出訊息" onclick="submitHandler();">
+                            <a id="mailTo"></a>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </header>
+        </div>
+
         <footer>
             <div class="foo_container">
                 <div class="foo_alignCol">
                     <ul>
-                        <li><a href="static/doing.html">DOING</a></li>
+                        <li><a href="doing.html">DOING</a></li>
                         <li><a href="book.html">BOOK</a></li>
-                        <li><a href="#">GALLERY</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
                     </ul>
                 </div>
                 <div class="foo_alignCol">
                     <ul>
-                        <li><a href="#">Q&A</a></li>
-                        <li><a href="#">SHIPPING</a></li>
-                        <li><a href="#">TERMS & PRIVACY</a></li>
+                        <li><a href="faq.html">Q&A</a></li>
+                        <li><a href="shipping.html">SHIPPING</a></li>
+                        <li><a href="terms.html">TERMS & PRIVACY</a></li>
                     </ul>
                 </div>
                 <div class="foo_alignCol foo_rightCol">
@@ -95,7 +116,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="js/all.js"></script>
+    <script src="../js/all.js"></script>
 </body>
 
 </html>
