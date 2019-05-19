@@ -1,4 +1,4 @@
-$(document).reday(function () {
+$(document).ready(function () {
     $("#submit").click(function () {
         var name = $("#name").val();
         var email = $("#email").val();
