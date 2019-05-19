@@ -86,65 +86,79 @@
                         聯絡我們
                     </div>
                     <br>
-                    <p id="returnmessage"></p>
-                    <form id="form" enctype="text/plain" accept-charset="utf-8">
-                        <!-- 寄件者姓名    -->
-                        <input id="name" type="text" name="Name" value size="60" placeholder="* 姓名" required>
 
-                        <!-- 寄件者email -->
-                        <input id="email" type="email" name="Email" value size="60" placeholder="* E-mail" required>
+                    <!-- <form action="" id="form">
+                        <label for="email">Email:</label>
+                        <input type="text" name="email" id="email" placeholder="email@example.com"><br>
+                        <label for="subject">Subject:</label>
+                        <input type="text" name="subject" id="subject" placeholder="subject"><br>
+                        <label for="message">Message:</label>
+                        <textarea name="message" id="message" placeholder="message"></textarea><br>
+                        <button name="submit" id="submit">Send</button>
+                        <label id="info"></label>
+                    </form> -->
 
-                        <!-- 寄件者電話 -->
-                        <input id="tel" type="tel" name="Phone" value size="60" aria-invalid="false" placeholder="電話">
-
-                        <!-- 郵件主旨 -->
-                        <input id="subTitile" type="text" name="Subject" value size="60" aria-invalid="false"
-                            placeholder="主旨">
-
-                        <!-- 郵件內容 -->
-                        <textarea id="message" name="your-message" cols="40" rows="10" aria-required="true"
-                            aria-invalid="false" placeholder="* 您的留言" required></textarea>
-
-                        <!-- 傳送按鈕 -->
-                        <input id="submit" type="submit" value="送 出"">
-                    </form>
+                    <div id="frmContact">
+                        <div id="mail-status"></div>
+                        <div>
+                            <label style="padding-top:20px;">Name</label><span id="userName-info"
+                                class="info"></span><br />
+                            <input type="text" name="userName" id="userName" class="demoInputBox">
+                        </div>
+                        <div>
+                            <label>Email</label><span id="userEmail-info" class="info"></span><br />
+                            <input type="text" name="userEmail" id="userEmail" class="demoInputBox">
+                        </div>
+                        <div>
+                            <label>Subject</label><span id="subject-info" class="info"></span><br />
+                            <input type="text" name="subject" id="subject" class="demoInputBox">
+                        </div>
+                        <div>
+                            <label>Content</label><span id="content-info" class="info"></span><br />
+                            <textarea name="content" id="content" class="demoInputBox" cols="60" rows="6"></textarea>
+                        </div>
+                        <div>
+                            <button name="submit" class="btnAction">Send</button>
+                        </div>
+                    </div>
+                    <!---->
                 </div>
             </div>
         </div>
 
         <footer>
             <div class=" foo_container">
-                        <div class="foo_alignCol">
-                            <ul>
-                                <li><a href="doing.html">DOING</a></li>
-                                <li><a href="book.html">BOOK</a></li>
-                                <li><a href="gallery.html">GALLERY</a></li>
-                            </ul>
-                        </div>
-                        <div class="foo_alignCol">
-                            <ul>
-                                <li><a href="faq.html">Q&A</a></li>
-                                <li><a href="shipping.html">SHIPPING</a></li>
-                                <li><a href="terms.html">TERMS & PRIVACY</a></li>
-                            </ul>
-                        </div>
-                        <div class="foo_alignCol foo_rightCol">
-                            <ul>
-                                <li><a href="#">FIND US !</a></li>
-                                <li><a class="foo_icons" href="https://www.facebook.com/moun.studio/" target="_blank"><i
-                                            class="fab fa-facebook-square"></i></a><a class="foo_icons"
-                                        href="https://www.instagram.com/moun_moun_official/" target="_blank"><i
-                                            class="fab fa-instagram"></i></a></li>
-                                <li><a href="javascript:(void)" style="cursor:default;">©2019 moun moun studio</a></li>
-                            </ul>
-                        </div>
+                <div class="foo_alignCol">
+                    <ul>
+                        <li><a href="doing.html">DOING</a></li>
+                        <li><a href="book.html">BOOK</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                    </ul>
                 </div>
-                </footer>
+                <div class="foo_alignCol">
+                    <ul>
+                        <li><a href="faq.html">Q&A</a></li>
+                        <li><a href="shipping.html">SHIPPING</a></li>
+                        <li><a href="terms.html">TERMS & PRIVACY</a></li>
+                    </ul>
+                </div>
+                <div class="foo_alignCol foo_rightCol">
+                    <ul>
+                        <li><a href="#">FIND US !</a></li>
+                        <li><a class="foo_icons" href="https://www.facebook.com/moun.studio/" target="_blank"><i
+                                    class="fab fa-facebook-square"></i></a><a class="foo_icons"
+                                href="https://www.instagram.com/moun_moun_official/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a></li>
+                        <li><a href="javascript:(void)" style="cursor:default;">©2019 moun moun studio</a></li>
+                    </ul>
+                </div>
             </div>
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-            <script src="../js/all.js"></script>
-            <script src="../js/contact.js"></script>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../js/all.js"></script>
+    <script src="../js/contact.js"></script>
 </body>
 
 </html>

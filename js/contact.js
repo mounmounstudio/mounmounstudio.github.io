@@ -1,60 +1,54 @@
 $(document).ready(function () {
 
-    var form = $('#form'),
-        email = $('#email'),
-        tel = $('#tel'),
-        subTitle = $('#subTitle'),
-        message = $('#message'),
-        submit = $("#submit");
-
-    // form.on('input', '#email, #subject, #message', function () {
-    //     $(this).css('border-color', '');
-    //     info.html('').slideUp();
-    // });
-
-    submit.on('click', function (e) {
-        e.preventDefault();
-        if (validate()) {
-            $.ajax({
+    $(".btnAction").click(function () {
+        var valid;
+        valid = validateContact();
+        if (valid) {
+            jQuery.ajax({
+                url: "contact_mail.php",
+                data: 'userName=' + $("#userName").val() + '&userEmail=' +
+                    $("#userEmail").val() + '&subject=' +
+                    $("#subject").val() + '&content=' +
+                    $(content).val(),
                 type: "POST",
-                url: "mailer.php",
-                data: form.serialize(),
-                dataType: "json"
-            }).done(function (data) {
-                if (data.success) {
-                    email.val('');
-                    tel.val('');
-                    subTitle.val('');
-                    message.val('');
-                    info.html('Message sent!').css('color', 'green').slideDown();
-                } else {
-                    info.html('Could not send mail! Sorry!').css('color', 'red').slideDown();
-                }
+                success: function (data) {
+                    $("#mail-status").html(data);
+                },
+                error: function () {}
             });
         }
     });
 
-    function validate() {
+
+    function validateContact() {
         var valid = true;
-        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
-        if (!regex.test(email.val())) {
-            email.css('border-color', 'red');
+        $(".demoInputBox").css('background-color', '');
+        $(".info").html('');
+        if (!$("#userName").val()) {
+            $("#userName-info").html("(required)");
+            $("#userName").css('background-color', '#FFFFDF');
             valid = false;
         }
-        if ($.trim(tel.val()) === "") {
-            tel.css('border-color', 'red');
+        if (!$("#userEmail").val()) {
+            $("#userEmail-info").html("(required)");
+            $("#userEmail").css('background-color', '#FFFFDF');
             valid = false;
         }
-        if ($.trim(subTitle.val()) === "") {
-            subTitle.css('border-color', 'red');
+        if (!$("#userEmail").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+            $("#userEmail-info").html("(invalid)");
+            $("#userEmail").css('background-color', '#FFFFDF');
             valid = false;
         }
-        if ($.trim(message.val()) === "") {
-            message.css('border-color', 'red');
+        if (!$("#subject").val()) {
+            $("#subject-info").html("(required)");
+            $("#subject").css('background-color', '#FFFFDF');
             valid = false;
         }
-
+        if (!$("#content").val()) {
+            $("#content-info").html("(required)");
+            $("#content").css('background-color', '#FFFFDF');
+            valid = false;
+        }
         return valid;
     }
 
