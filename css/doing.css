@@ -321,6 +321,12 @@ template {
   -ms-flex-align: center;
   align-items: center; }
 
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important; }
+
 body,
 html {
   margin: 0;
@@ -378,10 +384,10 @@ nav {
       .navbar_container .logo_nav a:hover {
         opacity: 0.8; }
       .navbar_container .logo_nav a img {
-        width: 100px; }
+        width: 70px; }
         @media (max-width: 749px) {
           .navbar_container .logo_nav a img {
-            width: 50px; } }
+            width: 60px; } }
   .navbar_container ul {
     width: calc(100% / 3);
     margin: 0;

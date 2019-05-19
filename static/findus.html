@@ -11,7 +11,7 @@
     <meta name="copyright" content="moun moun">
     <meta property="og:title" content="FIND US ! | moun moun">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.mounstudio.co/">
+    <meta property="og:url" content="https://www.mounstudio.co/static/findus.html">
     <meta property="og:image" content="">
     <meta property="og:description" content="">
     <meta property="og:site_name" content="moun moun">
@@ -55,68 +55,96 @@
             <div class="animateShow">
                 <div class="pageTitle">FIND US !</div>
                 <div class="pageContent">
-                    <form enctype="text/plain" accept-charset="utf-8">
+                    <ul>
+                        <li>官方網站 : <a href="https://www.mounstudio.co/">mounstudio.co</a></li>
+                        <li> E-mail : <a href="mailto:mounmounstudio@gmail.com">mounmounstudio@gmail.com</a></li>
+                        <li> Instagram : <a href="https://www.instagram.com/moun_moun_official/"
+                                target="_blank">https://www.instagram.com/moun_moun_official/</a></li>
+                        <li> Facebook : <a href="https://www.facebook.com/moun.studio/"
+                                target="_blank">https://www.facebook.com/moun.studio/</a></li>
+                        <li> ello : <a href="https://ello.co/mounmounstudio"
+                                target="_blank">https://ello.co/mounmounstudio</a></li>
+                        <li> pinterest : <a href="https://www.pinterest.com/mounstudio/"
+                                target="_blank">https://www.pinterest.com/mounstudio/
+                            </a></li>
+                    </ul>
+                    <br><br>
+                    <div class="categoryTitle">
+                        寄賣地點
+                    </div>
+                    <br>
+                    <p>moun moun studio™ 寄賣地點僅一家，位於台灣台北市大安區的 <a href="https://www.holasurf.com" target="_blank"> Hola
+                            Surf Boutique </a>
+                    </p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3614.9313178906245!2d121.5458059!3d25.0364048!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd1e4789853%3A0xeb5747513471f644!2sHolaSurf!5e0!3m2!1szh-TW!2stw!4v1558159992212!5m2!1szh-TW!2stw"
+                        frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="pageContent">
+                    <br>
+                    <div class="categoryTitle">
+                        聯絡我們
+                    </div>
+                    <br>
+                    <p id="returnmessage"></p>
+                    <form id="form" enctype="text/plain" accept-charset="utf-8">
                         <!-- 寄件者姓名    -->
-                        <input id="nameText" type="text" name="Name" value size="60" placeholder="姓名(name)" required>
-                        <!-- required 必填欄位 ，placeholder 預設內容-->
+                        <input id="name" type="text" name="Name" value size="60" placeholder="* 姓名" required>
 
                         <!-- 寄件者email -->
-                        <input id="emailText" type="email" name="Email" value size="60" placeholder="Email" required>
+                        <input id="email" type="email" name="Email" value size="60" placeholder="* E-mail" required>
 
                         <!-- 寄件者電話 -->
-                        <input id="telText" type="tel" name="Phone" value size="60" aria-invalid="false"
-                            placeholder="電話(phone)" required>
+                        <input id="tel" type="tel" name="Phone" value size="60" aria-invalid="false" placeholder="電話">
 
                         <!-- 郵件主旨 -->
-                        <input id="subText" type="text" name="Subject" value size="60" aria-invalid="false"
-                            placeholder="主旨(subject)" required>
+                        <input id="subTitile" type="text" name="Subject" value size="60" aria-invalid="false"
+                            placeholder="主旨">
 
                         <!-- 郵件內容 -->
-                        <textarea id="bodyText" name="your-message" cols="40" rows="10" aria-required="true"
-                            aria-invalid="false" placeholder="你的訊息(Your Message)" required></textarea>
+                        <textarea id="message" name="your-message" cols="40" rows="10" aria-required="true"
+                            aria-invalid="false" placeholder="* 您的留言" required></textarea>
 
                         <!-- 傳送按鈕 -->
-                        <div>
-                            <input type="button" value="送出訊息" onclick="submitHandler();">
-                            <a id="mailTo"></a>
-                        </div>
+                        <input id="submit" type="submit" value="送 出"">
                     </form>
                 </div>
             </div>
         </div>
 
         <footer>
-            <div class="foo_container">
-                <div class="foo_alignCol">
-                    <ul>
-                        <li><a href="doing.html">DOING</a></li>
-                        <li><a href="book.html">BOOK</a></li>
-                        <li><a href="gallery.html">GALLERY</a></li>
-                    </ul>
+            <div class=" foo_container">
+                        <div class="foo_alignCol">
+                            <ul>
+                                <li><a href="doing.html">DOING</a></li>
+                                <li><a href="book.html">BOOK</a></li>
+                                <li><a href="gallery.html">GALLERY</a></li>
+                            </ul>
+                        </div>
+                        <div class="foo_alignCol">
+                            <ul>
+                                <li><a href="faq.html">Q&A</a></li>
+                                <li><a href="shipping.html">SHIPPING</a></li>
+                                <li><a href="terms.html">TERMS & PRIVACY</a></li>
+                            </ul>
+                        </div>
+                        <div class="foo_alignCol foo_rightCol">
+                            <ul>
+                                <li><a href="#">FIND US !</a></li>
+                                <li><a class="foo_icons" href="https://www.facebook.com/moun.studio/" target="_blank"><i
+                                            class="fab fa-facebook-square"></i></a><a class="foo_icons"
+                                        href="https://www.instagram.com/moun_moun_official/" target="_blank"><i
+                                            class="fab fa-instagram"></i></a></li>
+                                <li><a href="javascript:(void)" style="cursor:default;">©2019 moun moun studio</a></li>
+                            </ul>
+                        </div>
                 </div>
-                <div class="foo_alignCol">
-                    <ul>
-                        <li><a href="faq.html">Q&A</a></li>
-                        <li><a href="shipping.html">SHIPPING</a></li>
-                        <li><a href="terms.html">TERMS & PRIVACY</a></li>
-                    </ul>
-                </div>
-                <div class="foo_alignCol foo_rightCol">
-                    <ul>
-                        <li><a href="#">FIND US !</a></li>
-                        <li><a class="foo_icons" href="https://www.facebook.com/moun.studio/" target="_blank"><i
-                                    class="fab fa-facebook-square"></i></a><a class="foo_icons"
-                                href="https://www.instagram.com/moun_moun_official/" target="_blank"><i
-                                    class="fab fa-instagram"></i></a></li>
-                        <li><a href="javascript:(void)" style="cursor:default;">©2019 moun moun studio</a></li>
-                    </ul>
-                </div>
+                </footer>
             </div>
-        </footer>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="../js/all.js"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <script src="../js/all.js"></script>
+            <script src="../js/contact.js"></script>
 </body>
 
 </html>
