@@ -5,7 +5,7 @@ $(document).ready(function () {
         valid = validateContact();
         if (valid) {
             jQuery.ajax({
-                url: "contact_mail.php",
+                url: "mailer.php",
                 data: 'userName=' + $("#userName").val() + '&userEmail=' +
                     $("#userEmail").val() + '&subject=' +
                     $("#subject").val() + '&content=' +
