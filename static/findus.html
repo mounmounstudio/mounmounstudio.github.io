@@ -86,42 +86,12 @@
                         聯絡我們
                     </div>
                     <br>
-
-                    <!-- <form action="" id="form">
-                        <label for="email">Email:</label>
-                        <input type="text" name="email" id="email" placeholder="email@example.com"><br>
-                        <label for="subject">Subject:</label>
-                        <input type="text" name="subject" id="subject" placeholder="subject"><br>
-                        <label for="message">Message:</label>
-                        <textarea name="message" id="message" placeholder="message"></textarea><br>
-                        <button name="submit" id="submit">Send</button>
-                        <label id="info"></label>
-                    </form> -->
-
-                    <div id="frmContact">
-                        <div id="mail-status"></div>
-                        <div>
-                            <label style="padding-top:20px;">Name</label><span id="userName-info"
-                                class="info"></span><br />
-                            <input type="text" name="userName" id="userName" class="demoInputBox">
-                        </div>
-                        <div>
-                            <label>Email</label><span id="userEmail-info" class="info"></span><br />
-                            <input type="text" name="userEmail" id="userEmail" class="demoInputBox">
-                        </div>
-                        <div>
-                            <label>Subject</label><span id="subject-info" class="info"></span><br />
-                            <input type="text" name="subject" id="subject" class="demoInputBox">
-                        </div>
-                        <div>
-                            <label>Content</label><span id="content-info" class="info"></span><br />
-                            <textarea name="content" id="content" class="demoInputBox" cols="60" rows="6"></textarea>
-                        </div>
-                        <div>
-                            <button name="submit" class="btnAction">Send</button>
-                        </div>
-                    </div>
-                    <!---->
+                    <form action="../js/mailer.php" method="POST">
+                        <p>Name</p> <input type="text" name="name">
+                        <p>Email</p> <input type="text" name="email">
+                        <p>Message</p><textarea name="message" rows="6" cols="25"></textarea><br />
+                        <input type="submit" value="Send"><input type="reset" value="Clear">
+                    </form>
                 </div>
             </div>
         </div>
