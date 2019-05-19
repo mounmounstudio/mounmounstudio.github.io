@@ -1,3 +1,55 @@
+
+<?php
+if ($_SERVER['REQUEST_METHOD'] === "POST") {
+	if (empty($_POST['email'])) {
+		$emailError = 'Email is empty';
+	} else {
+		$email = $_POST['email'];
+
+		// validating the email
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			$emailError = 'Invalid email';
+		}
+	}
+	if (empty($_POST['message'])) {
+		$messageError = 'Message is empty';
+	} else {
+		$message = $_POST['message'];
+	}
+	if (empty($emailError) && empty($messageError)) {
+		$date = date('j, F Y h:i A');
+
+		$emailBody = "
+			<html>
+			<head>
+				<title>$email is contacting you</title>
+			</head>
+			<body style=\"background-color:#fafafa;\">
+				<div style=\"padding:20px;\">
+					Date: <span style=\"color:#888\">$date</span>
+					<br>
+					Email: <span style=\"color:#888\">$email</span>
+					<br>
+					Message: <div style=\"color:#888\">$message</div>
+				</div>
+			</body>
+			</html>
+		";
+
+		$headers = 	'From: Contact Form <contact@mydomain.com>' . "\r\n" .
+    				"Reply-To: $email" . "\r\n" .
+    				"MIME-Version: 1.0\r\n" . 
+					"Content-Type: text/html; charset=iso-8859-1\r\n";
+
+		$to = 'contact@hyvor.com';
+		$subject = 'Contacting you';
+
+		if (mail($to, $subject, $emailBody, $headers)) {
+			$sent = true;	
+		}
+	}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,12 +138,37 @@
                         聯絡我們
                     </div>
                     <br>
-                    <form action="../js/mailer.php" method="POST">
-                        <p>Name</p> <input type="text" name="name">
-                        <p>Email</p> <input type="text" name="email">
-                        <p>Message</p><textarea name="message" rows="6" cols="25"></textarea><br />
-                        <input type="submit" value="Send"><input type="reset" value="Clear">
+
+                    <form method="POST" action="">
+                        <div class="input-wrap">
+                            <span class="label">Email:</span>
+                            <input type="text" name="email">
+                        </div>
+                        <div class="input-wrap">
+                            <span class="label">Message:</span>
+                            <textarea name="message"></textarea>
+                        </div>
+                        <div class="input-wrap">
+                            <input type="submit" name="submit" value="Submit" class="submit-button">
+                        </div>
+
                     </form>
+                    
+<?php if (isset($emailError) || isset($messageError)) : ?> 
+	<div id="error-message">
+		<?php 
+			echo isset($emailError) ? $emailError . '<br>' : ''; 
+			echo isset($messageError) ? $messageError . '<br>' : ''; 
+		?>
+	</div>
+<?php endif; ?>
+
+
+<?php if (isset($sent) && $sent === true) : ?> 
+	<div id="done-message">
+		Your data was succesfully submitted
+	</div>
+<?php endif; ?>
                 </div>
             </div>
         </div>
