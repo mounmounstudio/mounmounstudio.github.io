@@ -6,11 +6,11 @@ $(document).ready(function () {
         var subTitile = $("#subTitile").val();
         var message = $("#message").val();
 
-        alert(name);
+        console.log(name + email);
 
         $("#returnmessage").empty(); // To empty previous error/success message.
         // Checking for blank fields.
-        if (name == '' || email == '' || contact == '') {
+        if (name == '' || email == '' || message == '') {
             alert("Please Fill Required Fields");
         } else {
             // Returns successful data submission message when the entered information is stored in database.
