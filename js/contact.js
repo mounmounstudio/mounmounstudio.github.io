@@ -43,11 +43,11 @@ $(document).ready(function () {
             valid = false;
         }
         if ($.trim(tel.val()) === "") {
-            subject.css('border-color', 'red');
+            tel.css('border-color', 'red');
             valid = false;
         }
         if ($.trim(subTitle.val()) === "") {
-            subject.css('border-color', 'red');
+            subTitle.css('border-color', 'red');
             valid = false;
         }
         if ($.trim(message.val()) === "") {
