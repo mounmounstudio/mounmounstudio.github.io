@@ -384,7 +384,7 @@ nav {
       .navbar_container .logo_nav a:hover {
         opacity: 0.8; }
       .navbar_container .logo_nav a img {
-        width: 70px; }
+        width: 90px; }
         @media (max-width: 749px) {
           .navbar_container .logo_nav a img {
             width: 60px; } }
@@ -529,8 +529,7 @@ footer {
       -o-transition: 0.3s ease;
       transition: 0.3s ease; }
       .foo_alignCol ul li a:hover {
-        color: beige;
-        text-decoration: line-through; }
+        color: beige; }
     .foo_alignCol ul li .foo_icons {
       font-size: 0.9em;
       margin-right: 10px; }
@@ -598,7 +597,8 @@ footer {
   width: 100%;
   text-align: center;
   display: block;
-  font-weight: bold; }
+  font-weight: bold;
+  letter-spacing: 0.2em; }
 
 table {
   width: 100%;
