@@ -310,7 +310,7 @@ template {
 
 /*media queries*/
 /* FlexBox */
-.promoBar, .navbar_container, .mobile_menu ul, .foo_container, .doingContent {
+.promoBar, .navbar_container, .mobile_menu ul, .foo_container, .doingContent, .arrowIcon, .bigImageBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -348,7 +348,7 @@ html {
 
 nav {
   width: 100%;
-  height: 150px;
+  height: 200px;
   margin: auto;
   position: absolute;
   top: 43px;
@@ -384,10 +384,15 @@ nav {
       .navbar_container .logo_nav a:hover {
         opacity: 0.8; }
       .navbar_container .logo_nav a img {
-        width: 90px; }
+        width: 90px;
+        margin-bottom: 40px; }
+        @media (min-width: 750px) and (max-width: 969px) {
+          .navbar_container .logo_nav a img {
+            margin-bottom: 0px; } }
         @media (max-width: 749px) {
           .navbar_container .logo_nav a img {
-            width: 60px; } }
+            width: 60px;
+            margin-bottom: 0px; } }
   .navbar_container ul {
     width: calc(100% / 3);
     margin: 0;
@@ -453,12 +458,13 @@ nav {
       list-style: none;
       width: 100%;
       text-align: center;
-      margin: 20px 0; }
+      margin: 17px 0; }
       .mobile_menu ul li a {
         text-decoration: none;
         color: #D66D1B;
         letter-spacing: 0.4em;
-        font-weight: 500; }
+        font-weight: 500;
+        font-size: 0.8em; }
       .mobile_menu ul li #closeIcon {
         font-size: 1.8em; }
 
@@ -518,7 +524,7 @@ footer {
     margin: 15px 0; }
     @media (max-width: 749px) {
       .foo_alignCol ul li {
-        margin: 20px 0; } }
+        margin: 17px 0; } }
     .foo_alignCol ul li a {
       color: #D66D1B;
       text-decoration: none;
@@ -650,3 +656,54 @@ footer {
   margin-bottom: 50px;
   letter-spacing: 0.4em;
   text-align: center; }
+
+.lightBoxSec {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 10;
+  left: 0;
+  z-index: 100;
+  background-color: white;
+  display: none; }
+
+.closeLightBoxIcon {
+  position: absolute;
+  right: 50px;
+  top: 47px;
+  font-size: 150%;
+  color: #415D6E;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease; }
+  .closeLightBoxIcon:hover {
+    color: #D66D1B; }
+
+.arrowIcon {
+  text-decoration: none;
+  position: absolute;
+  top: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  font-size: 200%;
+  color: #415D6E;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease; }
+  .arrowIcon:hover {
+    color: #D66D1B; }
+
+.leftIcon {
+  left: 0; }
+
+.rightIcon {
+  right: 0; }
+
+.bigImageBox {
+  max-width: 80%;
+  height: 100%;
+  margin: auto;
+  padding: 50px 0; }
+  .bigImageBox img {
+    max-width: 100%;
+    max-height: 90%; }

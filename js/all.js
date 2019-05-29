@@ -4,10 +4,12 @@ $(document).ready(function () {
         e.preventDefault();
         $(".mobile_menu").fadeIn();
     });
+
     $("#closeIcon").click(function (e) {
         e.preventDefault();
         $(".mobile_menu").fadeOut();
     });
+
     //PageLoad
     $(".animateShow").delay(1000).css({
         "opacity": "1",
