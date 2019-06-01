@@ -37,15 +37,18 @@ $(document).ready(function () {
     let currentImageNum;
     $(".imageSlide").click(function (e) {
         e.preventDefault();
+        $("body").addClass("lockedScroll");
         $(".lightBoxSec").fadeIn();
         let currentImageClassName = $(this).attr('class');
         currentImageNum = currentImageClassName.split("img").pop();
         changeCurrentImage(currentImageNum);
+        console.log(currentImageNum);
     });
 
     $(".closeLightBoxIcon").click(function (e) {
         e.preventDefault();
         $(".lightBoxSec").fadeOut();
+        $("body").removeClass("lockedScroll");
     });
 
     $(".leftIcon").click(function (e) {

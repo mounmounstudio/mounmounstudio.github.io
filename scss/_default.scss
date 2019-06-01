@@ -21,6 +21,11 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+.lockedScroll {
+    height: 100%;
+    overflow: hidden;
+}
+
 // Nav
 .promoBar {
     @extend %flex_center;
