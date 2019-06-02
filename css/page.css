@@ -308,7 +308,6 @@ template {
 [hidden] {
   display: none; }
 
-/*media queries*/
 /* FlexBox */
 .promoBar, .navbar_container, .mobile_menu ul, .foo_container {
   display: -webkit-box;
@@ -321,6 +320,7 @@ template {
   -ms-flex-align: center;
   align-items: center; }
 
+/*media queries*/
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -428,14 +428,12 @@ nav {
       float: right;
       margin-left: 25px; }
 
-.mobile_menu,
 .mobile_menuItem {
   display: none; }
-
-@media (max-width: 749px) {
-  .mobile_menuItem {
-    display: block;
-    font-size: 1.5em; } }
+  @media (max-width: 749px) {
+    .mobile_menuItem {
+      display: block;
+      font-size: 1.5em; } }
 
 @media (max-width: 749px) {
   .desk_menuItem {
@@ -444,9 +442,9 @@ nav {
 .mobile_menu {
   position: fixed;
   top: 0;
-  left: 0;
+  right: -60%;
   z-index: 30;
-  width: 100%;
+  width: 60%;
   height: 100%;
   background-color: beige; }
   .mobile_menu ul {

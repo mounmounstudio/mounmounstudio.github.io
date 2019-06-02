@@ -2,12 +2,16 @@ $(document).ready(function () {
     // NAV
     $("#menuIcon").click(function (e) {
         e.preventDefault();
-        $(".mobile_menu").fadeIn();
+        $(".mobile_menu").animate({
+            right: "0%"
+        });
     });
 
     $("#closeIcon").click(function (e) {
         e.preventDefault();
-        $(".mobile_menu").fadeOut();
+        $(".mobile_menu").animate({
+            right: "-60%"
+        });
     });
 
     //PageLoad
