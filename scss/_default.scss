@@ -279,14 +279,14 @@ footer {
             margin: 15px 0;
 
             @include mobile {
-                margin: 17px 0;
+                margin: 20px 0;
             }
 
             a {
                 color: $orangeText;
                 text-decoration: none;
                 letter-spacing: 4px;
-                font-size: 0.5em;
+                font-size: 80%;
                 font-weight: 700;
                 -webkit-transition: 0.3s ease;
                 transition: 0.3s ease;
@@ -320,4 +320,55 @@ footer {
     margin-top: 50px;
     transition: 0.5s ease;
     opacity: 0;
+}
+
+// Column
+.col {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.col-flexCenter {
+    @extend %flex_center;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.col-1 {
+    width: 100%;
+}
+
+.col-2 {
+    width: 50%;
+
+    img {
+        width: 95%;
+    }
+}
+
+.col-3 {
+    width: 32%;
+
+    img {
+        width: 95%;
+    }
+}
+
+.threePhotoBox {
+    height: 300px;
+}
+
+.threeBigPhoto {
+    width: 52.895%;
+    height: 100%;
+    padding: 5px;
+}
+
+.threeMPhoto {
+    width: 23.552%;
+    height: 100%;
+    padding: 5px;
 }
