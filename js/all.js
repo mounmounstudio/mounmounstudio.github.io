@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $(".promoBar").text("Celebrate our co-founder Madeline's birthday with us! 20% off for all items only on June 15th!");
     // NAV
     $("#menuIcon").click(function (e) {
         e.preventDefault();

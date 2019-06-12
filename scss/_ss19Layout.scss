@@ -8,15 +8,56 @@
     img {
         width: 80%;
         margin: auto;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 }
 
 .ss19Content {
     width: 80%;
     margin: auto;
+
+    @include mobile {
+        width: 100%;
+    }
 }
 
 .ss19PhotoSub {
     width: 100%;
     text-align: center;
+}
+
+// Mobile
+
+.deskCol {
+    @include mobile {
+        display: none;
+    }
+}
+
+.threePhotoBox {
+    @include mobile {
+        display: none;
+    }
+}
+
+.mobileCol {
+    width: 100%;
+    height: auto;
+    display: none;
+
+    @include mobile {
+        display: block;
+    }
+}
+
+.m-colHalf {
+    display: inline-block;
+    width: 49%;
+
+    img {
+        width: 100%;
+    }
 }
