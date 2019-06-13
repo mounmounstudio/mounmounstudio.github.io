@@ -23,7 +23,7 @@ input[type=text],
 input[type=tel],
 input[type=email],
 textarea,
-input[type=submit] {
+#submit {
     width: 100%;
     max-width: 500px;
     margin: 10px 0;
@@ -51,7 +51,7 @@ textarea:focus {
     outline: none;
 }
 
-input[type=submit] {
+#submit {
     background-color: #4C7A9C;
     color: $lightestColor;
     padding: 14px 20px;
