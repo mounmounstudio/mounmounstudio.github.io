@@ -681,7 +681,7 @@ input[type=text],
 input[type=tel],
 input[type=email],
 textarea,
-#submit {
+input[type=submit] {
   width: 100%;
   max-width: 500px;
   margin: 10px 0; }
@@ -707,7 +707,7 @@ textarea:focus {
   background-color: beige;
   outline: none; }
 
-#submit {
+input[type=submit] {
   background-color: #4C7A9C;
   color: beige;
   padding: 14px 20px;
@@ -718,7 +718,7 @@ textarea:focus {
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease; }
-  #submit:hover {
+  input[type=submit]:hover {
     background-color: #ae9158;
     color: #415D6E; }
 

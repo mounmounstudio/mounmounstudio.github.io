@@ -698,14 +698,16 @@ th {
 .mobileCol {
   width: 100%;
   height: auto;
-  display: none; }
+  display: none;
+  text-align: center; }
   @media (max-width: 749px) {
     .mobileCol {
       display: block; } }
 
 .m-colHalf {
   display: inline-block;
-  width: 49%; }
+  width: 45%;
+  text-align: center; }
   .m-colHalf img {
     width: 100%; }
 

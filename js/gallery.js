@@ -126,10 +126,8 @@ $(document).ready(function () {
             $("#currentBigPhoto").attr("src", "../img/gallery/" + currentImageNum + ".jpg");
         } else if (htmlFile === "art.html") {
             $("#currentBigPhoto").attr("src", "../img/art/" + currentImageNum + ".jpg");
-        } else if ((htmlFile === "doing.html")) {
-            $("#currentBigPhoto").attr("src", "../img/doing/" + currentImageNum + ".jpg");
         } else {
-            $("#currentBigPhoto").attr("src", "../img/ss19/" + currentImageNum + ".jpg");
+            $("#currentBigPhoto").attr("src", "../img/doing/" + currentImageNum + ".jpg");
         }
     }
 });
