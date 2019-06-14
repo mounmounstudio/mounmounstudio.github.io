@@ -68,16 +68,16 @@ $(document).ready(function () {
                 }
             }
         }
-        createImage(54);
+        createImage(59);
     }
     $(window).resize(function () {
         if ($(window).width() < 767) {
             if (htmlFile === "gallery.html") {
-                createImage(54);
+                createImage(59);
             }
         } else {
             if (htmlFile === "gallery.html") {
-                createImage(54);
+                createImage(59);
             }
         }
     });
